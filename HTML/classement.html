@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classement des personnages d'animes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ffd700;
+        }
+
+        .header-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        .ranking {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card div {
+            padding: 1rem;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 2rem;
+            margin-top: 2rem;
+        }
+
+        footer .socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        footer .socials a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer .socials a:hover {
+            color: #ffd700;
+        }
+
+        footer .socials img {
+            width: 24px;
+            height: 24px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="classement.html">Classement</a>
+            <a href="anime.html">Animes</a>
+        </nav>
+        <h1 class="header-title">Le Classement Ultime de Tous les Personnages d'Animes</h1>
+    </header>
+
+    <main>
+        <section class="ranking">
+            <div class="card">
+                <img src="../IMG/naruto/naruto.jpeg" alt="Naruto Uzumaki">
+                <div>
+                    <h2>Naruto Uzumaki</h2>
+                    <p>Naruto est un ninja déterminé et courageux, prêt à tout pour protéger ses amis et devenir Hokage. Son énergie et sa persévérance en font un personnage emblématique et inspirant.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../IMG/naruto/sasuke.jpeg" alt="Sasuke Uchiha">
+                <div>
+                    <h2>Sasuke Uchiha</h2>
+                    <p>Sasuke est un ninja talentueux et solitaire, motivé par la vengeance et l’honneur de son clan. Son évolution complexe le rend fascinant et mystérieux.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../IMG/one_piece/luffy.jpeg" alt="Monkey D. Luffy">
+                <div>
+                    <h2>Monkey D. Luffy</h2>
+                    <p>Luffy est le capitaine des Chapeaux de Paille, courageux et insouciant, toujours prêt à défendre ses amis. Sa force et son esprit d’aventure en font un personnage légendaire.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../IMG/SAO/kirito.jpeg" alt="Kirito">
+                <div>
+                    <h2>Kirito</h2>
+                    <p>Kirito est un joueur d’élite dans Sword Art Online, connu pour sa stratégie et sa bravoure. Son courage et sa loyauté envers ses amis en font un héros respecté.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../IMG/bleach/ichigo.jpeg" alt="Ichigo Kurosaki">
+                <div>
+                    <h2>Ichigo Kurosaki</h2>
+                    <p>Ichigo est un adolescent doté de pouvoirs de Shinigami, protégeant les vivants et les morts. Sa force et son courage font de lui un personnage emblématique de Bleach.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../IMG/SNK/eren.jpeg" alt="Eren Yeager">
+                <div>
+                    <h2>Eren Yeager</h2>
+                    <p>Eren est déterminé à libérer l’humanité des Titans. Sa rage, son courage et sa soif de liberté font de lui un personnage complexe et fascinant dans Attack on Titan.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../IMG/black_clover/asta.jpeg" alt="Asta">
+                <div>
+                    <h2>Asta</h2>
+                    <p>Asta est un jeune sorcier sans mana mais doté d’une détermination sans limite. Sa ténacité et son énergie font de lui un héros inspirant de Black Clover.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../IMG/HxH/gon.jpeg" alt="Gon Freecss">
+                <div>
+                    <h2>Gon Freecss</h2>
+                    <p>Gon est un jeune chasseur courageux et curieux, toujours prêt à relever les défis pour retrouver son père et découvrir le monde. Sa détermination est contagieuse.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../IMG/demon_slayer/tanjiro.jpeg" alt="Tanjiro Kamado">
+                <div>
+                    <h2>Tanjiro Kamado</h2>
+                    <p>Tanjiro est un chasseur de démons au cœur pur, motivé par la protection de sa sœur. Son courage et sa compassion font de lui un personnage admirable.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../IMG/mha/deku.jpeg" alt="Izuku Midoriya">
+                <div>
+                    <h2>Izuku Midoriya</h2>
+                    <p>Izuku, alias Deku, est un jeune héros plein d’espoir et de courage. Sa détermination à devenir le plus grand héros inspire tous ceux qui le connaissent.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Suivez-nous sur les réseaux :</p>
+        <div class="socials">
+            <a href="#"><img src="../IMG/image/Facebook_logo.png" alt="Facebook">Facebook</a>
+            <a href="#"><img src="../IMG/image/logo_insta.jpeg" alt="Instagram">Instagram</a>
+            <a href="#"><img src="../IMG/image/logo_snapchat.png" alt="Snapchat">Snapchat</a>
+            <a href="#"><img src="../IMG/image/logo_tiktok.png" alt="TikTok">TikTok</a>
+            <a href="#"><img src="../IMG/image/X.avif" alt="X">X</a>
+            <a href="#"><img src="../IMG/image/logo_whatsapp.png" alt="WhatsApp">WhatsApp</a>
+        </div>
+    </footer>
+</body>
+</html>
