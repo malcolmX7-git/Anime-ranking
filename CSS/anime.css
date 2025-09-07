@@ -8,13 +8,16 @@ html{
     font-size: 10px;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 header{
     display: flex;
     flex-direction: column;
+}
 
+h1, h2, h3, header nav a {
+    font-family: 'Montserrat', sans-serif;
 }
 
 header nav{
@@ -49,7 +52,7 @@ header nav a:hover{
     height: 55rem;
     width: 100%;
     margin-top: 7rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.589)), url("../IMG/img-background/all.jpeg") center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.489)), url("../IMG/img-background/all.jpeg") center/cover no-repeat fixed;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -81,6 +84,7 @@ header nav a:hover{
 main{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     padding: 1rem 5rem;
     background-color: rgb(245, 245, 245);
@@ -182,3 +186,54 @@ footer .logo img:hover{
     transform: translate(.5rem, -5px);
     border-radius: 0.4rem;
 }
+
+@media (max-width: 599px){
+  header nav {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+  header nav a {
+      font-size: 1.8rem;
+      margin: 0.5rem;
+  }
+  .background-img {
+      height: 45rem;
+      margin-top: 6rem;
+      margin-top: 5rem;
+  }
+  .background-img h1 {
+      font-size: 3rem;
+  }
+  .btn-title {
+      font-size: 1.5rem;
+      padding: 0.8rem 2rem;
+  }
+
+  footer {
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: center;
+  }
+}
+
+@media (min-width: 1024px){
+  .background-img h1 {
+      font-size: 6rem;
+  }
+  .btn-title {
+      font-size: 2.2rem;
+      padding: 1.5rem 4.5rem;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 600px) {
+  .background-img h1 {
+      font-size: 4rem;
+  }
+  .btn-title {
+      font-size: 1.8rem;
+      padding: 1rem 3rem;
+  }
+}
+
