@@ -20,39 +20,39 @@ h1, h2, h3, header nav a {
     font-family: 'Montserrat', sans-serif;
 }
 
-header nav{
+header nav {
     display: flex;
     align-items: center;
     position: fixed;
-    background-color: rgb(255, 255, 255);
     width: 100%;
-    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.111);
-    padding: 0.5rem 0;
-    z-index: 2 ;
+    padding: 1rem;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
 }
 
-header nav a{
+header nav a {
     text-decoration: none;
-    margin: 1rem;
-    font-size: 2.25rem;
-    color: rgb(70, 70, 70);
+    margin: 1rem 3rem;
+    font-size: 2.3rem;
+    color: #070a0e;
     text-transform: capitalize;
-    flex-wrap: nowrap;
-    padding: .5rem 1rem;
+    padding: 0.8rem 0.8rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
 }
 
-header nav a:hover{
-    color: rgb(0, 4, 255);
-    transition: 0.8s;
-    background-color: rgba(204, 207, 206, 0.1);
-    border-radius: 1rem;
+header nav a:hover {
+    color: #ffffff;
+    background-color: #ad5ad1;
+    box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
 }
-
 .background-img{
     height: 55rem;
     width: 100%;
     margin-top: 7rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.489)), url("../IMG/img-background/all.jpeg") center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.489)), url("../IMG/img-background/all5.jpeg") center/cover no-repeat fixed;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -64,21 +64,6 @@ header nav a:hover{
     color: rgb(255, 255, 255);
     text-align: center;
     margin-bottom: 5rem;
-}
-
-.btn-title{
-    padding: 1.3rem 4rem;
-    text-decoration: none;
-    color: black;
-    border-radius: 2rem;
-    font-size: 2rem;
-    background-color: rgb(255, 134, 98);
-    border: none;
-    transition: 0.5s;
-}
-
-.btn-title:hover{
-    background-color: rgb(255, 60, 0);
 }
 
 main{
@@ -113,10 +98,11 @@ main{
 
 .card img{
     width: 100%;
-    height: 25rem;
+    height: 22.5rem;
     margin-bottom: 2rem;
     border-radius: 1rem 1rem 0 0;
     border: none;
+    object-fit: cover;
 }
 
 .card p{
@@ -130,61 +116,58 @@ main{
     font-size: 1.6rem;
     text-decoration: none;
     color: black;
-    background-color: rgba(82, 108, 255, 0.753);
+    background-color: rgba(138, 155, 252, 0.753);
     padding: 1.2rem;
     border-radius: 1.5rem;
-    transition: 0.5s;
+    transition: 0.3s;
     margin-bottom: 1.5rem;
+    font-weight: bold;
 }
 
 .card a:hover{
-    background-color: aqua ;
+    background-color: rgb(1, 37, 199) ;
+    color: white;
 }
 
 .card h1{
     font-size: 2.3rem;
     margin-bottom: 1rem;
+    color: rgb(6, 6, 88);
 }
 
 /*----------------------- PARTIE FOOTER --------------------*/
 
-footer{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 3rem;
-    background-color: rgb(3, 3, 54);
-}
-
-footer a span{
-    margin: 1rem .5rem 0 0;
-    color: white;
-}
-
-footer .logo{
+footer {
+    background: linear-gradient(135deg, #030336, #1a1a72);
+    color: #fff;
+    padding: 3rem 5rem;
     display: flex;
     flex-direction: column;
+    gap: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
 }
- 
-footer .logo a{
-    margin: 0.05rem;
+
+.footer-about{
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-about h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #56a0ff;
+}
+
+.footer-about p {
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    text-align: center;
     font-size: 1.5rem;
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-footer .logo img{
-    width: 40px;
-    height: 40px;
-    margin: 0.2rem;
-    border-radius: 1.4rem;
-    opacity: 0.3;
-    transition: 1s;
-}
-
-footer .logo img:hover{
-    opacity: 1;
-    transform: translate(.5rem, -5px);
-    border-radius: 0.4rem;
+    border-top: 0.1rem solid rgba(255,255,255,0.2);
+    padding-top: 1.5rem;
 }
 
 @media (max-width: 599px){
@@ -197,6 +180,7 @@ footer .logo img:hover{
       font-size: 1.8rem;
       margin: 0.5rem;
   }
+
   .background-img {
       height: 45rem;
       margin-top: 6rem;
@@ -211,10 +195,9 @@ footer .logo img:hover{
   }
 
   footer {
-      flex-direction: column;
-      align-items: flex-end;
-      text-align: center;
-  }
+        padding: 2rem;
+        font-size: 1.4rem;
+    }
 }
 
 @media (min-width: 1024px){
@@ -236,4 +219,3 @@ footer .logo img:hover{
       padding: 1rem 3rem;
   }
 }
-

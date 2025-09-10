@@ -20,45 +20,47 @@ h1, h2 {
 header{
     display: flex;
     flex-direction: column;
-
 }
 
-a, .btn-title, .sidebar h3 {
+a, .sidebar h3 {
     font-family: 'Raleway', 'Lato', sans-serif;
 }
 
 
-header nav{
+header nav {
     display: flex;
     align-items: center;
     position: fixed;
-    background-color: rgb(255, 255, 255);
     width: 100%;
-    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.111);
-    padding: .2rem 0;
-    z-index: 2 ;
-
+    padding: 0.8rem; 
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.08); 
+    backdrop-filter: blur(0.625rem); 
 }
 
-header nav a{
+header nav a {
     text-decoration: none;
-    margin: 0.7rem;
-    font-size: 1.3rem;
-    color: rgb(128, 128, 128);
+    margin: 0.625rem 1.775rem;
+    font-size: 1.4375rem;
+    color: #070a0e;
     text-transform: capitalize;
-    flex-wrap: nowrap;
-    padding: 1rem 1rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
 }
 
-header nav a:hover{
-    transition: 0.5s;
-    color: #001aff;
-    border-radius: 1rem;
+header nav a:hover {
+    color: #ffffff;
+    background-color: #ad5ad1;
+    box-shadow: 0 0.25rem 0.9375rem rgba(142, 68, 173, 0.3);
 }
+
+
 
 .background-img{
     height: 35rem;
-    margin-top: 5.5rem;
+    margin-top: 4rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -78,8 +80,8 @@ p{
 }
 
 
-/* FIN POUR LE HEADER */
-/* DEBUT SECTION IMAGE */
+/*---------------------------- FIN POUR LE HEADER -----------------------*/
+/*---------------------------- DEBUT SECTION IMAGE -----------------------*/
 main {
     display: flex;
     margin: 0;
@@ -131,7 +133,7 @@ main section img {
     max-width: 16rem;
     margin-top: 2rem;
     padding: 0.5rem 1rem;
-    transition: border-raduis, 0.8s;
+    transition: 0.8s;
     border-radius: 1.5rem;
 }
 
@@ -215,43 +217,37 @@ main .sidebar {
 }
 /*----------------------- PARTIE FOOTER --------------------*/
 
-footer{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 3rem;
-    background-color: rgb(3, 3, 54);
-}
-
-footer a span{
-    margin: 1rem .5rem 0 0;
-    color: white;
-}
-
-footer .logo{
+footer {
+    background: linear-gradient(112deg, #030336, #48018a);
+    color: #fff;
+    padding: 1.8rem 3.1rem;
     display: flex;
     flex-direction: column;
+    gap: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
 }
- 
-footer .logo a{
-    margin: 0.05rem;
+
+.footer-about{
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-about h2{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #56a0ff;
+}
+
+.footer-about p {
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    text-align: center;
     font-size: 1rem;
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-footer .logo img{
-    width: 40px;
-    height: auto;
-    margin: 0.2rem;
-    border-radius: 1.4rem;
-    opacity: 0.3;
-    transition: 1s;
-}
-
-footer .logo img:hover{
-    opacity: 1;
-    transform: translate(.5rem, -5px);
-    border-radius: 0.4rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 1rem;
 }
 
 /* -------------------- RESPONSIVE -------------------- */
@@ -317,7 +313,7 @@ footer .logo img:hover{
 
     .background-img {
         height: 25rem;
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
 
     .background-img h1 {
@@ -330,28 +326,15 @@ footer .logo img:hover{
     }
 
     footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    footer .logo {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    footer .logo a {
-        margin: 0.3rem;
+        padding: 2rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .background-img {
-        height: 25rem;
-        margin-top: 4rem;
+        height: 30rem;
+        margin-top: 1rem;
     }
 
     .background-img h1 {
@@ -363,8 +346,13 @@ footer .logo img:hover{
         max-width: 18rem;
     }
 
-    header nav a {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
+    header nav {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+  header nav a {
+      font-size: 1rem;
+      margin: 0.1rem;
+  }
 }
