@@ -14,12 +14,12 @@ html{
 header{
     display: flex;
     flex-direction: column;
-
 }
 
 header nav{
     display: flex;
     align-items: center;
+    /* justify-content: space-between; */
     position: fixed;
     width: 100%;
     padding: 1rem;
@@ -46,6 +46,19 @@ header nav a:hover {
     box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
 }
 
+/* form{
+    margin-right: 3rem;
+}
+
+input{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px rgba(77, 77, 77, 0.705) solid;
+}
+
+label{
+    font-size: 1.5rem;
+} */
 
 .background-img{
     height: 55rem;
