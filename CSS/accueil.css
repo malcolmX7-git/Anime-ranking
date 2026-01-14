@@ -46,6 +46,75 @@ header nav a:hover {
     box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
 }
 
+/* Burger caché sur desktop */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.5rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    height: 0.3rem;
+    background: #070a0e;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Menu normal desktop */
+.menu-links {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    header nav {
+        justify-content: space-between;
+    }
+
+    .menu-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(255,255,255,0.95);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none; /* caché par défaut */
+    }
+
+    .menu-links a {
+        margin: 1rem 0;
+    }
+
+    .burger {
+        display: flex; /* visible uniquement mobile */
+    }
+
+    /* Menu actif lorsqu'on clique */
+    .menu-links.active {
+        display: flex;
+    }
+
+    /* Animation burger */
+    .burger.toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+
 /* form{
     margin-right: 3rem;
 }
@@ -63,7 +132,7 @@ label{
 .background-img{
     height: 55rem;
     margin-top: 7rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.489)), url("../IMG/img-background/all2.jpeg") center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.489)), url("../IMG/2img-background/all2.jpeg") center/cover no-repeat fixed;
     display: flex;
     align-items: center;
     flex-direction: column;

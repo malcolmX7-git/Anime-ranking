@@ -18,6 +18,10 @@ body{
     line-height: 1.4;
 }
 
+.hidden{
+    display: none;
+}
+
 header{
     display: flex;
     flex-direction: column;
@@ -66,11 +70,76 @@ header nav a:hover{
     background-color: #ad5ad1;
     box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
 }
+
+
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.5rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    height: 0.3rem;
+    background: #070a0e;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: flex;            /* flex obligatoire */
+        justify-content: space-between; /* logo à gauche, burger à droite */
+        align-items: center;      /* verticalement aligné */
+        padding: 1rem 2rem;       /* optionnel */
+        position: fixed;           /* pour rester en haut */
+        width: 100%;
+        background: rgba(255,255,255,0.95);
+        z-index: 10;
+    }
+
+    .menu-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(255,255,255,0.95);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none; /* caché par défaut */
+        padding: 1rem 0;
+    }
+
+    .menu-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex; /* visible uniquement sur mobile */
+    }
+
+    /* Ajustement des liens */
+    .menu-links a {
+        margin: 1rem 0;
+    }
+}
+
+
+
 .background-img{
     height: 55rem;
     width: 100%;
     margin-top: 7rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0.389) ), url("../IMG/img-background/all5.jpeg") center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0.389) ), url("../IMG/2img-background/all5.jpeg") center/cover no-repeat fixed;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -90,7 +159,7 @@ main{
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem 5rem;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(240, 240, 240);
 }
 
 .card{
@@ -147,10 +216,11 @@ main{
     color: white;
 }
 
-.card h1{
+.card h2{
     font-size: 2.3rem;
     margin-bottom: 1rem;
     color: rgb(6, 6, 88);
+
 }
 
 /*----------------------- PARTIE FOOTER --------------------*/
@@ -178,6 +248,8 @@ footer {
 
 .footer-about p {
     line-height: 1.6;
+    font-size: 1.8rem;
+    color: white;
 }
 
 .footer-bottom {
@@ -186,6 +258,48 @@ footer {
     border-top: 0.1rem solid rgba(255,255,255,0.2);
     padding-top: 1.5rem;
 }
+
+/* Styles pour les spans dans les paragraphes */
+span.anime {
+    font-weight: 700;               /* Texte en gras pour mettre en avant l'anime */
+    color: #ff6f61;                 /* Couleur chaude et moderne (orange/rouge) */
+    background: rgba(255, 111, 97, 0.1); /* Légère surbrillance derrière le texte */
+    padding: 2px 6px;               /* Petit padding pour faire ressortir */
+    border-radius: 5px;             /* Coins arrondis pour un effet moderne */
+    transition: all 0.3s ease;      /* Animation fluide sur hover */
+    cursor: default;                /* Curseur neutre */
+}
+
+span.anime:hover {
+    color: #ffffff;                 /* Texte devient blanc au hover */
+    background: #ff6f61;            /* Fond plus intense au hover */
+    transform: scale(1.05);         /* Légère mise en relief */
+}
+
+span.perso {
+    font-weight: 600;               /* Moins gras que l'anime mais visible */
+    color: #4f9aff;                 /* Couleur bleue pour les personnages */
+    background: rgba(79, 154, 255, 0.1); /* Surbrillance légère */
+    padding: 2px 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: default;                /* Peut suggérer une action future */
+}
+
+span.perso:hover {
+    color: #ffffff;                 /* Texte devient blanc au hover */
+    background: #4f9aff;            /* Fond bleu vif au hover */
+    transform: scale(1.05);
+}
+
+/* Optionnel : améliore la lisibilité dans les paragraphes */
+p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #333;                    /* Texte principal sombre pour contraste */
+}
+
+/* Responsive : ajuste la taille du texte sur petits écrans */
 
 @media (max-width: 599px){
   header nav {
@@ -270,4 +384,67 @@ nav .icone-logo{
   .card img {
     height: 40rem;
   }
+}
+
+@media (max-width: 768px) {
+    span.anime, span.perso {
+        font-size: 0.95rem;
+        padding: 1px 4px;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between; /* les éléments aux extrémités */
+        align-items: center;
+        padding: 1rem 2rem;
+        position: fixed;
+        width: 100%;
+        background: rgba(255,255,255,0.95);
+        z-index: 10;
+    }
+
+    .hidden{
+        display: flex;
+    }
+
+    .burger {
+        display: flex; /* visible mobile */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2.5rem;
+        height: 2rem;
+        cursor: pointer;
+    }
+
+    .burger span {
+        display: block;
+        height: 0.3rem;
+        background: #070a0e;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.95);
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 1rem 0;
+    }
+
+    .menu-links.active {
+        display: flex;
+    }
+
+    .menu-links a {
+        margin: 1rem 0;
+    }
 }
