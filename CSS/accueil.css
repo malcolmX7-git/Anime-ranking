@@ -115,24 +115,10 @@ header nav a:hover {
 }
 
 
-/* form{
-    margin-right: 3rem;
-}
-
-input{
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: 1px rgba(77, 77, 77, 0.705) solid;
-}
-
-label{
-    font-size: 1.5rem;
-} */
-
 .background-img{
     height: 55rem;
     margin-top: 7rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.489)), url("../IMG/2img-background/all2.jpeg") center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.489)), url("../IMG/2img-background/all2.webp") center/cover no-repeat fixed;
     display: flex;
     align-items: center;
     flex-direction: column;

@@ -1198,7 +1198,6 @@ const templateHtml = (anime) => {
         <link rel="icon" type="image/png" sizes="16x16" href="../IMG/Favicon/favicon-16x16.png">
         <link rel="manifest" href="../IMG/Favicon/site.webmanifest">
         <link rel="stylesheet" href="../CSS/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&family=Raleway:wght@500&display=swap" rel="stylesheet">
         <style>
             .background-img{
                 margin-top: 5.5rem;

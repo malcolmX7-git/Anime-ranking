@@ -139,7 +139,7 @@ header nav a:hover{
     height: 55rem;
     width: 100%;
     margin-top: 7rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0.389) ), url("../IMG/2img-background/all5.jpeg") center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0.389) ), url("../IMG/2img-background/all5.webp") center/cover no-repeat fixed;
     display: flex;
     align-items: center;
     flex-direction: column;

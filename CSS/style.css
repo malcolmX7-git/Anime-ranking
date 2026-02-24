@@ -37,6 +37,7 @@ header nav {
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.08); 
     backdrop-filter: blur(0.625rem); 
+    padding: 0.5rem 0;
 }
 
 nav img{
@@ -352,7 +353,7 @@ footer {
 
 @media (max-width: 480px) {
     .background-img {
-        height: 30rem;
+        height: 39rem;
         margin: 0;
     }
     
@@ -365,6 +366,10 @@ footer {
         margin: 0;
     }
 
+    .background-img{
+        margin-top: 60px;
+    }
+
     .principale img {
         width: 100%;
         max-width: 16rem;
@@ -375,6 +380,7 @@ footer {
       justify-content: space-around;
       align-items: center;
       margin: 0;
+      height: 90px;
   }
 
     nav img{
@@ -386,10 +392,11 @@ footer {
     nav .icone-logo{
         margin: 0 0 0 0.2rem;
         padding: 0;
+        width: 60px;
     }
 
   header nav a {
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin: 0.1rem;
   }
 }

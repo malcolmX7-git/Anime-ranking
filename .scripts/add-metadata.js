@@ -35,7 +35,6 @@ function makeMetaBlock(name, relPathPrefix, fileUrlPath){
         <link rel="icon" type="image/png" sizes="16x16" href="${relPathPrefix}IMG/Favicon/favicon-16x16.png">
         <link rel="manifest" href="${relPathPrefix}IMG/Favicon/site.webmanifest">
         <link rel="stylesheet" href="${relPathPrefix}CSS/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&family=Raleway:wght@500&display=swap" rel="stylesheet">
 `;
 }
 
