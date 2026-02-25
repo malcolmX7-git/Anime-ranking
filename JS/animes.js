@@ -24,37 +24,52 @@ if ('IntersectionObserver' in window) {
     images.forEach(img => imageObserver.observe(img));
 }
 
-// Optimisation pour anime.html: lazy-load des cartes après le premier écran
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card');
-    if (cards.length > 15) { // Si baucoup de cartes sur anime.html
-        let cardCount = 0;
-        cards.forEach((card, index) => {
-            if (index >= 12) { // Masquer les cartes après les 12 premières
-                card.style.display = 'none';
-            }
-        });
-        
-        // Créer conteneur de pagination s'il n'existe pas
-        const main = document.querySelector('main');
-        if (main && !document.querySelector('.pagination-container')) {
-            const paginationDiv = document.createElement('div');
-            paginationDiv.className = 'pagination-container';
-            paginationDiv.style.cssText = 'text-align: center; padding: 2rem; margin: 2rem 0;';
-            
-            const loadMoreBtn = document.createElement('button');
-            loadMoreBtn.textContent = 'Charger plus d\'animes';
-            loadMoreBtn.style.cssText = 'padding: 1rem 2rem; font-size: 1.1rem; background: rgba(138, 155, 252, 0.753); border: none; border-radius: 1.5rem; cursor: pointer; font-weight: bold;';
-            loadMoreBtn.addEventListener('click', () => {
-                cards.forEach((card, index) => {
-                    if (index >= 12) {
-                        card.style.display = 'flex';
-                    }
-                });
-                loadMoreBtn.style.display = 'none';
-            });
-            paginationDiv.appendChild(loadMoreBtn);
-            main.appendChild(paginationDiv);
+// Fonction throttle pour optimiser les événements scroll
+function throttle(func, delay) {
+    let lastCall = 0;
+    return function(...args) {
+        const now = Date.now();
+        if (now - lastCall >= delay) {
+            lastCall = now;
+            return func(...args);
         }
-    }
-});
+    };
+}
+
+// Back-to-top button functionality
+function initBackToTopButton() {
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    if (!backToTopBtn) return; // Bouton n'existe pas
+    
+    // Afficher/Masquer le bouton en fonction du scroll
+    const scrollThreshold = 100; // Afficher après 100px scrollé
+    
+    window.addEventListener('scroll', throttle(() => {
+        if (window.pageYOffset > scrollThreshold) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    }, 100)); // Throttle à 100ms pour performance
+    
+    // Scroll fluide vers le haut au clic
+    backToTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Optionnel: Focus sur bouton après scroll pour accessibilité
+    backToTopBtn.addEventListener('click', function() {
+        // Retard léger pour laisser le scroll se faire avant focus
+        setTimeout(() => {
+            document.querySelector('h1')?.focus();
+        }, 600);
+    });
+}
+
+// Initialiser le bouton back-to-top au chargement de la page
+document.addEventListener('DOMContentLoaded', initBackToTopButton);
