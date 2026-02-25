@@ -155,6 +155,9 @@ main section img {
     border-radius: 1.5rem;
     /* object-position: top center; */
     object-position: top;
+    display: block;
+    background-color: #f0f0f0;
+    contain: layout style paint;
 }
 
 .principale .publication{

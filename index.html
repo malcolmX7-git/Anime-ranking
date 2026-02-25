@@ -16,7 +16,10 @@
         <meta name="twitter:description" content="Découvre et vote pour les personnages cultes de tes animés préférés.">
         <meta name="twitter:image" content="https://ton-site.com/IMG/logo-anime_ranking.webp">
         <link rel="icon" href="../IMG/logo-anime_ranking.webp" type="image/png">
+        <link rel="preload" as="image" href="IMG/2img-background/naruto_s.webp">
+        <link rel="preload" as="image" href="IMG/2img-background/op.webp">
         <link rel="stylesheet" href="CSS/accueil.css">
+        <script src="JS/animes.js" defer></script>
     </head>
     <body>
         <header>
@@ -38,10 +41,10 @@
         <main>
             <section class="big-three">
                 <div class="big-three-img">
-                    <img src="IMG/2img-background/naruto_s.webp" alt="Naruto Shippuden" width="280" height="380">
-                    <img src="IMG/2img-background/op.webp" alt="One Piece" width="280" height="380">
-                    <img src="IMG/2img-background/hxh.webp" alt="Hunter x Hunter" width="280" height="380">
-                    <img src="IMG/2img-background/solo leveling.webp" alt="Solo Leveling" width="280" height="380">
+                    <img src="IMG/2img-background/naruto_s.webp" alt="Naruto Shippuden" width="280" height="380" loading="lazy">
+                    <img src="IMG/2img-background/op.webp" alt="One Piece" width="280" height="380" loading="lazy">
+                    <img src="IMG/2img-background/hxh.webp" alt="Hunter x Hunter" width="280" height="380" loading="lazy">
+                    <img src="IMG/2img-background/solo leveling.webp" alt="Solo Leveling" width="280" height="380" loading="lazy">
                 </div>
                 <a href="HTML/anime.html">Voir d'autre animes</a>
             </section>

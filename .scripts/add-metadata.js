@@ -58,7 +58,7 @@ roots.forEach(root => {
     }
     if(!animeName) animeName = file.replace('.html','').replace(/_/g,' ');
 
-    // Determine relative path prefix: if file in root `HTML/` then prefix is "../" for links to IMG and CSS, else "../../"? Actually pages currently use ../ so for files in HTML root prefix='../', for files in 1_FUTURE_PROJECT use '../..'?
+    // Determine relative path prefix: if file in root `HTML/` then prefix is "../" for links to IMG and CSS, else "../"? Actually pages currently use ../ so for files in HTML root prefix='../', for files in 1_FUTURE_PROJECT use '../..'?
     // Existing files in 1_FUTURE_PROJECT use "../IMG/..." and "../CSS/..." because they are inside HTML/1_FUTURE_PROJECT and move one level up to reach CSS. So relPathPrefix for files in HTML root should be '../'?? Wait: black clover (in HTML root) uses ../CSS/style.css (one level up). Files in 1_FUTURE_PROJECT also use ../CSS/style.css (one level up from HTML/1_FUTURE_PROJECT). So both use "../". We'll use '../' as prefix.
     const relPathPrefix = '../';
     const fileUrlPath = path.relative(__dirname, filePath).replace(/\\/g,'/'); // e.g. HTML/black clover.html

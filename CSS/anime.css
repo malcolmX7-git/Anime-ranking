@@ -190,6 +190,9 @@ main{
     border-radius: 1rem 1rem 0 0;
     border: none;
     object-fit: cover;
+    display: block;
+    background-color: #f0f0f0;
+    contain: layout style paint;
 }
 
 .card p{
