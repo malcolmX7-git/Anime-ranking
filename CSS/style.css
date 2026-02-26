@@ -361,7 +361,7 @@ main img {
 
 @media (max-width: 480px) {
     .background-img {
-        height: 37rem;
+        height: 34rem;
         margin: 0;
     }
     
@@ -380,7 +380,7 @@ main img {
 
     .principale img {
         width: 100%;
-        max-width: 16rem;
+        max-width: 13rem
     }
 
     header nav {
